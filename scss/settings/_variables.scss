@@ -11,14 +11,13 @@ $fontSize: 16;
 $titleFontSize: 48;
 
 
-
 // Контейнер ------------------------------------------------------------------------------------------------------------------------------
 // Отступы безопасности
 $containerPadding: 15;
 // Ширина контейнера по макету
 $maxWidthContainer: 1200;
 // Ширина контейнера с учётом отступов безопасности
-$containerWidth: $maxWidthContainer + $containerPadding + $containerPadding;
+$containerWidth: $maxWidthContainer + ($containerPadding *2);
 // Ширина полотна (макета)
 $maxWidth: 1920;
 // Минимальная ширина страницы
