@@ -2,3 +2,61 @@
 @import 'settings/variables';
 
 /*-----------footer-------------------------------------------------------------------------------------------*/
+.footer {}
+
+.footer-top {
+
+    &__container {}
+
+    &__body {}
+
+    &__title {}
+
+    &__text {}
+
+    &__form {}
+
+    &__input {}
+
+    &__btn {}
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $blue;
+    justify-content: space-between;
+    gap: rem(15);
+    padding: rem(40) rem(15);
+    color: $white;
+
+    &__body {
+        flex: 0 1 auto;
+    }
+
+    &__logo {}
+
+    &__link {
+        display: block;
+        color: $white;
+        font-size: rem(30);
+        font-weight: 700;
+        line-height: 160%;
+    }
+
+    &__text {
+        color: rgba(255, 255, 255, 0.70);
+        font-size: rem(16);
+        line-height: 160%;
+    }
+
+    &__tel {
+        flex: 0 1 auto;
+        color: $white;
+        font-size: rem(30);
+        font-weight: 600;
+        line-height: 160%;
+    }
+
+}
