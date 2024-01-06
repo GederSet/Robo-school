@@ -1,0 +1,21 @@
+/* Структура сайта ---------------------------------------------------------------------------------------------------*/
+@import 'functions';
+@import 'variables';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+    min-height: 100%;
+
+    >main {
+        flex: 1 1 auto;
+    }
+}
+
+// Контейнер
+[class*='__container'] {
+    max-width: rem($containerWidth);
+    padding: 0 rem($containerPadding);
+    margin: 0 auto;
+}

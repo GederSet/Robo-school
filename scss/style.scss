@@ -1,0 +1,17 @@
+// Настройки
+@import 'settings/functions';
+@import 'settings/variables';
+@import 'settings/null';
+@import 'settings/structure';
+
+// BEM
+@import 'BEM/title';
+// @import 'BEM/label';
+// @import 'BEM/buttons';
+// @import 'BEM/gradient-text';
+// @import 'BEM/gradient-block';
+
+// Сайт
+@import 'header';
+@import 'main';
+@import 'footer';

@@ -1,0 +1,13 @@
+@import '../settings/functions';
+@import '../settings/variables';
+
+/*-----------gradient-text------------------------------------------------------------------------------------*/
+
+.gradient-text {
+
+    span {
+        background: linear-gradient(90deg, blue 0%, orange 100%);
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}

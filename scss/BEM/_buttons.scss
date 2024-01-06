@@ -1,0 +1,15 @@
+@import '../settings/functions';
+@import '../settings/variables';
+
+/*-----------button-------------------------------------------------------------------------------------------*/
+
+.button {
+    color: $white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: 1;
+}

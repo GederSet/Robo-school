@@ -1,0 +1,139 @@
+@import '../settings/functions';
+@import '../settings/variables';
+
+/*-----------gradient-block----------------------------------------------------------------------------------*/
+
+// .gradient-block-background
+.gradient-block-background {
+    position: relative;
+    background: linear-gradient(90deg, $blueLight 0%, $purpleLight 100%);
+
+    &__content {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.gradient-block-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(rem(10));
+    background: linear-gradient(90deg, $blueLight 0%, $purpleLight 100%);
+    transition: opacity 0.4s ease 0s;
+}
+
+.gradient-block-background:hover::before {
+    opacity: 1;
+}
+
+
+// .gradient-block-border
+.gradient-block-border,
+.gradient-block-border-hover {
+    position: relative;
+    background:
+        // граница сверху, граница снизу
+        linear-gradient(to right, $blueLight 0%, $purpleLight 100%) left top / 100% rem(1) no-repeat,
+        linear-gradient(to right, $blueLight 0%, $purpleLight 100%) left bottom / 100% rem(1) no-repeat,
+        linear-gradient(to right, transparent 0%, transparent 100%) left center / 100% 100% no-repeat;
+    border-radius: 0;
+
+    // .gradient-block-border::before,
+    // .gradient-block-border::after
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: rem(0);
+        transition: border-color 0.4s ease 0s;
+    }
+
+    // .gradient-block-border::before
+    &::before {
+        left: 0;
+        border: rem(1) solid $blueLight;
+        border-right: none;
+        border-radius: 0 0 0 0;
+    }
+
+    // .gradient-block-border::after
+    &::after {
+        right: 0;
+        border: rem(1) solid $purpleLight;
+        border-left: none;
+        border-radius: 0 0 0 0;
+    }
+}
+
+.gradient-block-border-hover {
+
+    // .gradient-block-border-hover::before,
+    // .gradient-block-border-hover::after,
+    &:hover::before,
+    &:hover::after {
+        border-color: transparent;
+    }
+
+    // .gradient-block-border-hover__content
+    &__content {
+        position: relative;
+        z-index: 2;
+    }
+
+    // .gradient-block-border-hover__hide-border
+    &__hide-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background:
+            // граница сверху, граница снизу
+            linear-gradient(to right, $blueLight 0%, $purpleLight 100%) left top / 100% rem(1) no-repeat,
+            linear-gradient(to right, $blueLight 0%, $purpleLight 100%) left bottom / 100% rem(1) no-repeat,
+            linear-gradient(to right, transparent 0%, transparent 100%) left center / 100% 100% no-repeat;
+        border-radius: 0;
+        transition: opacity 0.4s ease 0s;
+
+        // .gradient-block-border__hide-border::before,
+        // .gradient-block-border__hide-border::after
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: rem(0);
+        }
+
+        // .gradient-block-border__hide-border::before
+        &::before {
+            left: 0;
+            border: rem(1) solid $blueLight;
+            border-right: none;
+            border-radius: 0 0 0 0;
+        }
+
+        // .gradient-block-border__hide-border::after
+        &::after {
+            right: 0;
+            border: rem(1) solid $purpleLight;
+            border-left: none;
+            border-radius: 0 0 0 0;
+        }
+    }
+
+    // .gradient-block-border-hover__hide-border
+    &:hover>&__hide-border {
+        opacity: 1;
+    }
+
+}
