@@ -6,7 +6,7 @@
 // .gradient-block-background
 .gradient-block-background {
     position: relative;
-    background: linear-gradient(90deg, $blueLight 0%, $purpleLight 100%);
+    background: linear-gradient(90deg, grey 0%, transparent 100%);
 
     &__content {
         position: relative;
@@ -23,7 +23,7 @@
     width: 100%;
     height: 100%;
     filter: blur(rem(10));
-    background: linear-gradient(90deg, $blueLight 0%, $purpleLight 100%);
+    background: linear-gradient(90deg, grey 0%, transparent 100%);
     transition: opacity 0.4s ease 0s;
 }
 
@@ -38,8 +38,8 @@
     position: relative;
     background:
         // граница сверху, граница снизу
-        linear-gradient(to right, $blueLight 0%, $purpleLight 100%) left top / 100% rem(1) no-repeat,
-        linear-gradient(to right, $blueLight 0%, $purpleLight 100%) left bottom / 100% rem(1) no-repeat,
+        linear-gradient(to right, grey 0%, transparent 100%) left top / 100% rem(1) no-repeat,
+        linear-gradient(to right, grey 0%, transparent 100%) left bottom / 100% rem(1) no-repeat,
         linear-gradient(to right, transparent 0%, transparent 100%) left center / 100% 100% no-repeat;
     border-radius: 0;
 
@@ -58,7 +58,7 @@
     // .gradient-block-border::before
     &::before {
         left: 0;
-        border: rem(1) solid $blueLight;
+        border: rem(1) solid grey;
         border-right: none;
         border-radius: 0 0 0 0;
     }
@@ -66,7 +66,7 @@
     // .gradient-block-border::after
     &::after {
         right: 0;
-        border: rem(1) solid $purpleLight;
+        border: rem(1) solid transparent;
         border-left: none;
         border-radius: 0 0 0 0;
     }
@@ -97,8 +97,8 @@
         opacity: 0;
         background:
             // граница сверху, граница снизу
-            linear-gradient(to right, $blueLight 0%, $purpleLight 100%) left top / 100% rem(1) no-repeat,
-            linear-gradient(to right, $blueLight 0%, $purpleLight 100%) left bottom / 100% rem(1) no-repeat,
+            linear-gradient(to right, grey 0%, transparent 100%) left top / 100% rem(1) no-repeat,
+            linear-gradient(to right, grey 0%, transparent 100%) left bottom / 100% rem(1) no-repeat,
             linear-gradient(to right, transparent 0%, transparent 100%) left center / 100% 100% no-repeat;
         border-radius: 0;
         transition: opacity 0.4s ease 0s;
@@ -117,7 +117,7 @@
         // .gradient-block-border__hide-border::before
         &::before {
             left: 0;
-            border: rem(1) solid $blueLight;
+            border: rem(1) solid grey;
             border-right: none;
             border-radius: 0 0 0 0;
         }
@@ -125,7 +125,7 @@
         // .gradient-block-border__hide-border::after
         &::after {
             right: 0;
-            border: rem(1) solid $purpleLight;
+            border: rem(1) solid transparent;
             border-left: none;
             border-radius: 0 0 0 0;
         }

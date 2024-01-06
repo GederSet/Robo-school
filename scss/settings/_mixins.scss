@@ -1,0 +1,80 @@
+@mixin gradientBlockBorderNoHover ($borderSize, $borderRadius, $noHoverLeft, $noHoverRight, $noHoverBgrLeft, $noHoverBgrRight) {
+    border-radius: rem($borderRadius);
+    background:
+        // граница сверху, граница снизу
+        linear-gradient(to right, $noHoverLeft 0%, $noHoverRight 100%) left top / 100% rem($borderSize) no-repeat,
+        linear-gradient(to right, $noHoverLeft 0%, $noHoverRight 100%) left bottom / 100% rem($borderSize) no-repeat,
+        linear-gradient(to right, $noHoverBgrLeft 0%, $noHoverBgrRight 100%) left center / 100% 100% no-repeat;
+
+    &::before,
+    &::after {
+        width: rem($borderRadius);
+    }
+
+    &::before {
+        border: rem($borderSize) solid $noHoverLeft;
+        border-radius: rem($borderRadius) 0 0 rem($borderRadius);
+        border-right: none;
+    }
+
+    &::after {
+        border: rem($borderSize) solid $noHoverRight;
+        border-radius: 0 rem($borderRadius) rem($borderRadius) 0;
+        border-left: none;
+    }
+}
+
+@mixin gradientBlockBorderHover ($borderSize, $borderRadius, $transition, $noHoverLeft, $noHoverRight, $noHoverBgrLeft, $noHoverBgrRight, $hoverLeft, $hoverRight, $hoverBgrLeft, $hoverBgrRight) {
+    border-radius: rem($borderRadius);
+    background:
+        // граница сверху, граница снизу
+        linear-gradient(to right, $noHoverLeft 0%, $noHoverRight 100%) left top / 100% rem($borderSize) no-repeat,
+        linear-gradient(to right, $noHoverLeft 0%, $noHoverRight 100%) left bottom / 100% rem($borderSize) no-repeat,
+        linear-gradient(to right, $noHoverBgrLeft 0%, $noHoverBgrRight 100%) left center / 100% 100% no-repeat;
+
+    &::before,
+    &::after {
+        width: rem($borderRadius);
+        transition: border-color $transition ease 0s;
+    }
+
+    &::before {
+        border: rem($borderSize) solid $noHoverLeft;
+        border-radius: rem($borderRadius) 0 0 rem($borderRadius);
+        border-right: none;
+    }
+
+    &::after {
+        border: rem($borderSize) solid $noHoverRight;
+        border-radius: 0 rem($borderRadius) rem($borderRadius) 0;
+        border-left: none;
+    }
+
+    &>.gradient-block-border-hover__hide-border {
+        border-radius: rem($borderRadius);
+        background:
+            // граница сверху, граница снизу
+            linear-gradient(to right, $hoverLeft 0%, $hoverRight 100%) left top / 100% rem($borderSize) no-repeat,
+            linear-gradient(to right, $hoverLeft 0%, $hoverRight 100%) left bottom / 100% rem($borderSize) no-repeat,
+            linear-gradient(to right, $hoverBgrLeft 0%, $hoverBgrRight 100%) left center / 100% 100% no-repeat;
+
+        transition: opacity $transition ease 0s;
+
+        &::before,
+        &::after {
+            width: rem($borderRadius);
+        }
+
+        &::before {
+            border: rem($borderSize) solid $hoverLeft;
+            border-radius: rem($borderRadius) 0 0 rem($borderRadius);
+            border-right: none;
+        }
+
+        &::after {
+            border: rem($borderSize) solid $hoverRight;
+            border-radius: 0 rem($borderRadius) rem($borderRadius) 0;
+            border-left: none;
+        }
+    }
+}
