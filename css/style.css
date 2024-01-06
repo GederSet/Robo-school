@@ -16,10 +16,10 @@ body {
   height: 100%;
   width: 100%;
   line-height: 1;
-  font-family: "Segoe";
+  font-family: "Jost";
   font-weight: 400;
-  font-size: 1rem;
-  color: black;
+  font-size: 1.125rem;
+  color: #141024;
   -ms-text-size-abjust: 100%;
   -moz-text-size-abjust: 100%;
   -webkit-text-size-abjust: 100%;
@@ -134,6 +134,26 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+input::-webkit-input-placeholder {
+  color: #141024;
+  font-family: "Jost";
+}
+
+input:-moz-placeholder {
+  color: #141024;
+  font-family: "Jost";
+}
+
+input::-moz-placeholder {
+  color: #141024;
+  font-family: "Jost";
+}
+
+input:-ms-input-placeholder {
+  color: #141024;
+  font-family: "Jost";
+}
+
 /* Структура сайта ---------------------------------------------------------------------------------------------------*/
 .wrapper {
   display: flex;
@@ -149,6 +169,26 @@ input[type=number]::-webkit-outer-spin-button {
   max-width: 76.875rem;
   padding: 0 0.9375rem;
   margin: 0 auto;
+}
+
+/*-----------title------------------------------------------------------------------------------------*/
+.title {
+  font-size: 3.125rem;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+/*-----------button-------------------------------------------------------------------------------------------*/
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  line-height: 160%;
+  color: #141024;
+  border-radius: 0.3125rem;
+  background-color: #D52027;
 }
 
 /*-----------header-------------------------------------------------------------------------------------------*/

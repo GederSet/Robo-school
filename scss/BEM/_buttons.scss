@@ -4,12 +4,13 @@
 /*-----------button-------------------------------------------------------------------------------------------*/
 
 .button {
-    color: $white;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: rem(14);
-    font-weight: 400;
-    line-height: 1;
+    font-size: rem(18);
+    line-height: 160%;
+    color: $text;
+    border-radius: rem(5);
+    background-color: $red;
 }
