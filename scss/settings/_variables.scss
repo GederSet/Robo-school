@@ -17,7 +17,7 @@ $containerPadding: 15;
 // Ширина контейнера по макету
 $maxWidthContainer: 1200;
 // Ширина контейнера с учётом отступов безопасности
-$containerWidth: $maxWidthContainer + ($containerPadding *2);
+$containerWidth: $maxWidthContainer + ($containerPadding *2); //сначала умножение
 // Ширина полотна (макета)
 $maxWidth: 1920;
 // Минимальная ширина страницы
