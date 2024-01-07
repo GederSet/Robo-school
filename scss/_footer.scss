@@ -2,61 +2,135 @@
 @import 'settings/variables';
 
 /*-----------footer-------------------------------------------------------------------------------------------*/
-.footer {}
+.footer {
 
-.footer-top {
+    &__top {
+        background-color: $red;
+        position: relative;
+        z-index: 1;
+        @include adaptiveValue("padding-top", 87, 30);
+        @include adaptiveValue("padding-bottom", 87, 30);
 
-    &__container {}
-
-    &__body {}
-
-    &__title {}
-
-    &__text {}
-
-    &__form {}
-
-    &__input {}
-
-    &__btn {}
-}
-
-.footer-bottom {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: $blue;
-    justify-content: space-between;
-    gap: rem(15);
-    padding: rem(40) rem(15);
-    color: $white;
-
-    &__body {
-        flex: 0 1 auto;
+        &::before {
+            content: '%%%%%%%%%%%%%%%%%%%%';
+            left: 0;
+            bottom: 0;
+            width: rem(2800);
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.08);
+            z-index: 2;
+            position: absolute;
+            @include adaptiveValue("font-size", 120, 60);
+        }
     }
 
-    &__logo {}
+    &__bottom {
+        background-color: $blue;
+        padding: rem(40) rem(15);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptiveValue("column-gap", 40, 10);
+        @include adaptiveValue("padding-top", 40, 20);
+        @include adaptiveValue("padding-bottom", 40, 20);
+    }
+}
 
-    &__link {
+.top-footer {
+
+    &__container {
+        display: flex;
+        gap: rem(64);
+        position: relative;
+        z-index: 3;
+    }
+
+    &__body {
+        flex: 1 1 50%;
+        color: $white;
+    }
+
+    &__title {
+        font-weight: 600;
+        line-height: 130%;
+        @include adaptiveValue('font-size', 36, 24)
+    }
+
+    &__text {
+        @include adaptiveValue('font-size', 20, 14)
+    }
+
+    &__form {
+        flex: 1 1 50%;
+    }
+
+    &__input {
+        display: block;
+        border-radius: 5px;
+        background: #F6F6F6;
+        width: 100%;
+        margin-bottom: rem(10);
+        @include adaptiveValue('padding', 20, 10);
+
+        &::placeholder {
+            color: rgba(40, 41, 68, 0.70);
+        }
+    }
+
+    &__btn {
+        border-radius: 5px;
+        width: 100%;
         display: block;
         color: $white;
-        font-size: rem(30);
-        font-weight: 700;
-        line-height: 160%;
+        background: $blue;
+        @include adaptiveValue('padding', 20, 10);
+    }
+}
+
+@media (max-width:em(750)) {
+    .top-footer__container {
+        flex-wrap: wrap;
+    }
+
+    .top-footer__body {
+        flex: 1 1 auto;
+    }
+
+    .top-footer__form {
+        flex: 1 1 auto;
+    }
+}
+
+.bottom-footer {
+
+    &__body {
+        flex: 0 0 auto;
+    }
+
+    &__logo {
+        & a {
+            color: $white;
+            font-weight: 700;
+            line-height: 160%;
+            @include adaptiveValue("font-size", 30, 18)
+        }
     }
 
     &__text {
         color: rgba(255, 255, 255, 0.70);
-        font-size: rem(16);
         line-height: 160%;
+        @include adaptiveValue("font-size", 16, 12)
     }
 
     &__tel {
-        flex: 0 1 auto;
-        color: $white;
-        font-size: rem(30);
-        font-weight: 600;
-        line-height: 160%;
-    }
+        flex: 0 0 auto;
 
+        & a {
+            color: $white;
+            font-weight: 600;
+            line-height: 160%;
+            @include adaptiveValue("font-size", 30, 18)
+        }
+    }
 }
