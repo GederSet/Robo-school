@@ -2,3 +2,85 @@
 @import 'settings/variables';
 
 /*-----------main-------------------------------------------------------------------------------------------*/
+
+
+
+
+/*-----------package-------------------------------------------------------------------------------------------*/
+.package {
+    margin-top: 1000px;
+    @include adaptiveValue("margin-bottom", 120, 40);
+
+    &__container {}
+
+    &__title {
+        @include adaptiveValue("margin-bottom", 60, 20);
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include adaptiveValue("gap", 40, 15);
+    }
+
+    &__item {
+        flex: 1 1 rem(290);
+
+        color: $text;
+        background-color: $white;
+        border-radius: rem(20);
+        text-align: center;
+        transition: 0.5s;
+        border: rem(1) solid rgba(20, 16, 36, 0.20);
+        @include adaptiveValue("padding", 40, 15);
+    }
+}
+
+.item-package {
+
+    &__title {
+        @include adaptiveValue("padding-bottom", 63, 30);
+        @include adaptiveValue("font-size", 30, 18);
+        font-weight: 600;
+        line-height: 160%;
+        transition: 0.5s;
+    }
+
+    &__price {
+        @include adaptiveValue("padding-bottom", 20, 10);
+        @include adaptiveValue("font-size", 50, 24);
+        font-weight: 600;
+        line-height: 160%;
+        transition: 0.5s;
+    }
+
+    &__text {
+        @include adaptiveValue("font-size", 18, 14);
+        @include adaptiveValue("padding-bottom", 61, 30);
+        font-weight: 400;
+        line-height: 160%;
+        transition: 0.5s;
+    }
+
+    &__btn {
+        width: 100%;
+    }
+}
+
+@media (hover:hover) {
+    .item-package:hover {
+        color: $white;
+        background-color: $blue;
+        margin: rem(-20) 0;
+
+        & .item-package__title {
+            @include adaptiveValue("padding-bottom", 83, 40);
+        }
+
+        & .item-package__text {
+            @include adaptiveValue("padding-bottom", 81, 40);
+        }
+    }
+
+}

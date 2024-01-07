@@ -14,7 +14,7 @@
         &::before {
             content: '%%%%%%%%%%%%%%%%%%%%';
             left: 0;
-            bottom: 0;
+            bottom: rem(-30);
             width: rem(2800);
             font-weight: 600;
             color: rgba(255, 255, 255, 0.08);
@@ -25,6 +25,8 @@
     }
 
     &__bottom {
+        position: relative;
+        z-index: 3;
         background-color: $blue;
         padding: rem(40) rem(15);
         display: flex;
