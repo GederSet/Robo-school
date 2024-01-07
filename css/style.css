@@ -438,3 +438,35 @@ input:-ms-input-placeholder {
 }
 /*-----------main-------------------------------------------------------------------------------------------*/
 /*-----------footer-------------------------------------------------------------------------------------------*/
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #141024;
+  justify-content: space-between;
+  gap: 0.9375rem;
+  padding: 2.5rem 0.9375rem;
+  color: white;
+}
+.footer-bottom__body {
+  flex: 0 1 auto;
+}
+.footer-bottom__link {
+  display: block;
+  color: white;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+.footer-bottom__text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  line-height: 160%;
+}
+.footer-bottom__tel {
+  flex: 0 1 auto;
+  color: white;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 160%;
+}
