@@ -10,7 +10,11 @@
     justify-content: center;
     font-size: rem(18);
     line-height: 160%;
-    color: $text;
+    color: $white;
     border-radius: rem(5);
     background-color: $red;
+    @include adaptiveValue(padding-top, 25, 10);
+    @include adaptiveValue(padding-bottom, 25, 10);
+    @include adaptiveValue(padding-left, 54, 20);
+    @include adaptiveValue(padding-right, 54, 20);
 }
