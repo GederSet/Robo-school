@@ -7,4 +7,5 @@
     font-size: rem($titleFontSize);
     font-weight: 600;
     line-height: 160%;
+    @include adaptiveValue("font-size", $titleFontSize, 34);
 }
